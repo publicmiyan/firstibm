@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			@font-face {
+				font-family: 'iconfont';
+				/* project id 308142 */
+				src: url('//at.alicdn.com/t/font_b4cnc4ow4h392j4i.eot');
+				src: url('//at.alicdn.com/t/font_b4cnc4ow4h392j4i.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_b4cnc4ow4h392j4i.woff') format('woff'), url('//at.alicdn.com/t/font_b4cnc4ow4h392j4i.ttf') format('truetype'), url('//at.alicdn.com/t/font_b4cnc4ow4h392j4i.svg#iconfont') format('svg');
+			}
+			
+			.icon {
+				font-family: "iconfont";
+			}
+		</style>
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+		<script>
+			$(function() {
+				$('.bgr').mouseover(function() {
+					$(this).css({
+						background: '#3b6caa',
+						color: 'white'
+					})
+					$(this).find('span').stop().fadeIn()
+				})
+				$('.bgr').mouseleave(function() {
+					$(this).css({
+						background: 'lightgray',
+						color: 'black'
+					})
+					$(this).find('span').css({
+						display: 'none'
+					})
+				})
+				$('#firstOne').mouseover(function() {
+					$(this).find('.find').stop().slideDown()
+					$(this).find('.findright').stop().slideDown()
+				})
+				$('#firstOne').mouseleave(function() {
+					$(this).find('.find').stop().slideUp()
+					$(this).find('.findright').stop().slideUp()
+				})
+				$('#public').mouseleave(function() {
+					$(this).stop().slideUp()
+				})
+				$("#btn").click(function() {
+					$('.zhezhao').css({
+						display: 'block'
+					})
+					$('.zhezhao').find('.rightnav').animate({
+						right: '0'
+					})
+				})
+				$('#btns').click(function() {
+					$('.zhezhao').css({
+						display: 'none'
+					})
+				})
+				$(window).scroll(function(){
+					var a = $(window).scrollTop()
+					if(a > 800){
+						$('.returntop').animate({right: '30px'})
+					}
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class='nav'>
+			<h1>IBM</h1>
+			<ul class='navul'>
+				<li id='firstOne'>
+					<a href="">Products</a>&nbsp;
+					<span class='icon'>&#xe6a6;</span>
+					<div id="public" class='find'>
+						<h2>Find</h2>
+						<div class='bgr allProducts'>All Products</div>
+						<h2>Explore</h2>
+						<div class='bgr analytics'>Analytics
+							<span class='icon' style="float: right;margin-right: 10px;">&#xe600;</span>
+						</div>
+						<div class='bgr analytics'>Analytics
+							<span class='icon' style="float: right;margin-right: 10px;">&#xe600;</span>
+						</div>
+						<div class='bgr analytics'>Analytics
+							<span class='icon' style="float: right;margin-right: 10px;">&#xe600;</span>
+						</div>
+						<div class='bgr analytics'>Analytics
+							<span class='icon' style="float: right;margin-right: 10px;">&#xe600;</span>
+						</div>
+						<div class='bgr analytics'>Analytics
+							<span class='icon' style="float: right;margin-right: 10px;">&#xe600;</span>
+						</div>
+					</div>
+					<div class='findright'>
+						<div class="leftConnet">
+							<h2>Analytics</h2>
+							<h3>Quicklinks</h3>
+							<div class='test'>Analytics and data management</div>
+							<div class="test">Industry solutions</div>
+							<div class="test">Enterprise performance management</div>
+							<div class="test">Watson Analytics</div>
+							<div class="test">Cloud data services</div>
+						</div>
+						<div class="rightConnet">
+							<h4>Transform financial and operational performance</h4>
+							<img src="img/rightConnet.jpg" alt="" />
+							<p>Make faster decisions when you automate your manual processes for planning, budgeting and forecasting</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="">Services</a>&nbsp;
+					<span class='icon'>&#xe6a6;</span>
+				</li>
+				<li>
+					<a href="">Industries</a>&nbsp;
+					<span class='icon'>&#xe6a6;</span>
+				</li>
+				<li>
+					<a href="">Developers</a>&nbsp;
+					<span class='icon'>&#xe6a6;</span>
+				</li>
+				<li>
+					<a href="">Support</a>
+				</li>
+				<li>
+					<a href="">Careers</a>
+				</li>
+			</ul>
+			<div class="nav-r">
+				<div class='liebiao box'>
+					<span id="btn" class='icon'>&#xe699;</span>
+					<div class='zhezhao'>
+						<div class='rightnav'>
+							<div id="btns" class='rightnavTest' style="border-bottom: 2px solid gray;height: 50px;">
+								<span class='icon'>&#xe69a;</span>
+							</div>
+							<div class='rightnavTest'>
+								<p>Marketplace</p>
+							</div>
+							<div class='rightnavTest'>
+								<div class='rightnavTests'>
+									<p>Products</p>
+									<span class='icon add'>&#xe6fe;</span>
+									<span class='icon subtract'>&#xe6b9;</span>
+								</div>
+								<ol>
+									<li>All Products</li>
+									<li>All Products</li>
+									<li>All Products</li>
+									<li>All Products</li>
+									<li>All Products</li>
+								</ol>
+							</div>
+							<div class='rightnavTest'>Services</div>
+							<div class='rightnavTest'>Industries</div>
+							<div class='rightnavTest'>Developers</div>
+							<div class='rightnavTest'>Support</div>
+							<div class='rightnavTest'>Gareers</div>
+						</div>
+					</div>
+				</div>
+				<div class='person box'>
+					<span class='icon'>&#xe6b8;</span>
+				</div>
+				<div class="search">
+					<input type="text" placeholder="Search" />
+					<span class='icon'>&#xe6ac;</span>
+				</div>
+			</div>
+			<p class="market">&nbsp;&nbsp;Marketplace&nbsp;&nbsp;</p>
+		</div>
+		<div class='banner'>
+			<div class='bannerText'>
+				<h1>P-TECH helps young scholars merge ambition and opportunity</h1>
+				<p class='p1'>Innovative public school model prepares students for ‘new collar’ careers</p>
+				<p class='icon p2'>&#xe6f9;&nbsp;Meet the 2017 graduates</p>
+				<p class='icon p3'>&#xe6ba;&nbsp;See how P-TECH works</p>
+			</div>
+			<div class='bannerText2'>
+				<ul>
+					<li>Follow IBM</li>
+					<li class='icon'>&#xe684;</li>
+					<li>in</li>
+					<li class='icon'>&#xe661;</li>
+					<li class='icon'>&#xe612;</li>
+				</ul>
+			</div>
+		</div>
+		<div class='connet'>
+			<div class="connet-1">
+				<div class="one">
+					<h1>This week at IBM</h1>
+				</div>
+				<div class="two">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+				<div class="three">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+				<div class="four">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+			</div>
+			<div class="connet-1" style="color: white;">
+				<div class="one" style="background: #264a60;">
+					<h1>This week at IBM</h1>
+				</div>
+				<div class="two" style="background: #1d3649;">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+				<div class="three" style="background: #264a60;">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+				<div class="four" style="background: #1d3649;">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+			</div>
+			<div class="connet-1">
+				<div class="one">
+					<h1>This week at IBM</h1>
+				</div>
+				<div class="two">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+				<div class="three">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+				<div class="four">
+					<div class="two1"></div>
+					<div class="two2">
+						<h4>Oncologists may now have more time with their patients</h4>
+						<p>Watson quickly performs time-consuming searches of medical literature</p>
+						<p class='icon text1'>&#xe6f9;</p>
+						<p class="text2">See how Watson Health helps oncologists</p>
+					</div>
+				</div>
+			</div>
+			<div class="connet-2">
+				<div class="connetLeft">
+					<h1>How your business can get smarter</h1>
+				</div>
+				<div class="connetRight">
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+					<div class="watson">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Analytics</h4>
+						<p>Gain greater insights and innovate faster</p>
+					</div>
+				</div>
+			</div>
+			<div class='connet-3'>
+				<div class="connet-3-text">
+					<p class='p4'>Client story of the week</p>
+					<h1>500 million tweets a day help Osnabrück University fight the flu</h1>
+					<p class="p5">Watson helps researchers analyze social media to track outbreaks worldwide, accelerating predictions and prevention</p></br>
+					<div class='read'>Read the story</div>
+				</div>
+			</div>
+			<div class="connet-4">
+				<div class='connetLeft'>
+					<h1>How can we help?</h1>
+				</div>
+				<div class="connetRight">
+					<div class="support">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Support portal</h4>
+						<p>Get help today for the IBM services and software you own</p>
+					</div>
+					<div class="support">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Support portal</h4>
+						<p>Get help today for the IBM services and software you own</p>
+					</div>
+					<div class="support">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Support portal</h4>
+						<p>Get help today for the IBM services and software you own</p>
+					</div>
+					<div class="support">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Support portal</h4>
+						<p>Get help today for the IBM services and software you own</p>
+					</div>
+					<div class="support">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Support portal</h4>
+						<p>Get help today for the IBM services and software you own</p>
+					</div>
+					<div class="support">
+						<p class='icon' style="font-size: 30px;">&#xe630;</p>
+						<h4 style="line-height: 30px;">Support portal</h4>
+						<p>Get help today for the IBM services and software you own</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bottom'>
+			<div class="discover">
+				<div class="discover-1">
+					<h4>Discover</h4>
+					<ul>
+						<li>Marketplace</li>
+						<li>Products</li>
+						<li>Services</li>
+						<li>Industries</li>
+						<li>Industries</li>
+					</ul>
+				</div>
+				<div class="discover-1">
+					<h4>Discover</h4>
+					<ul>
+						<li>Marketplace</li>
+						<li>Products</li>
+						<li>Services</li>
+						<li>Industries</li>
+						<li>Industries</li>
+					</ul>
+				</div>
+				<div class="discover-1">
+					<h4>Discover</h4>
+					<ul>
+						<li>Marketplace</li>
+						<li>Products</li>
+						<li>Services</li>
+						<li>Industries</li>
+						<li>Industries</li>
+					</ul>
+				</div>
+				<div class="discover-1">
+					<h4>Discover</h4>
+					<ul>
+						<li>Marketplace</li>
+						<li>Products</li>
+						<li>Services</li>
+						<li>Industries</li>
+						<li>Industries</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="select">
+			<h4>Select a country/region</h4>
+			<select class="selects" name="">
+				<option value="">United States - English</option>
+				<option value="">Afghanistan - English</option>
+				<option value="">Algeria - French</option>
+				<option value="">Angola - Portuguese</option>
+			</select>
+		</div>
+		<div class="footer">
+			<ul>
+				<li>Contact</li>
+				<li>Privacy</li>
+				<li>Terms of use</li>
+				<li>Accessibility</li>
+				<li>Feedback</li>
+			</ul>
+			<ul style="float: right;">
+				<li>Follow IBM</li>
+				<li class='icon'>&#xe684;</li>
+				<li>in</li>
+				<li class='icon'>&#xe661;</li>
+				<li class='icon'>&#xe612;</li>
+			</ul>
+		</div>
+		<div class="returntop">
+			<a href="">∧</a>
+		</div>
+	</body>
+
+</html>
